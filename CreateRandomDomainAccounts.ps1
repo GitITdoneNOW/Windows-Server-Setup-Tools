@@ -1,7 +1,8 @@
-﻿# This sript will pick from the provided list of names to create random accounts into the domain under the OU specified.
+################################################
+# This sript will pick from the provided list of names to create random accounts into the domain under the OU specified.
 # Currently the script is set to create 200 random accounts with matching email addresses with random password.
 # It checks for duplicates before creating the next account
-
+################################################
 # Only adjust the following (I didn't have time to set up the scipt with proper variables so look for these parameters):
 ## "OU=UsersRandom3,DC=ld,DC=local"
 ## SearchBase "DC=ld,DC=local"
@@ -9,11 +10,10 @@
 ## ($users.Count -lt 200)   <--This can be adjusted or just run the script multiple times but note that the CSV created that has the passwords will be overwritten.
 ## Export-Csv -Path "C:\UserList.csv"  <-- WARNING - Passwords are store in this file!!
 ## Import-Csv -Path "C:\UserList.csv"
-
-
+################################################
 # Created by Nicholas Zulli
 # Created on 20240702
-
+################################################
 
 Import-Module ActiveDirectory
 
